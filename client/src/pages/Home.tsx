@@ -723,13 +723,64 @@ export default function Home() {
 
       {/* ── Mobile Sticky CTA Bar ── */}
       <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white border-t border-gray-200 shadow-2xl px-4 py-3 flex gap-3">
-        <a href="tel:+18888888888" className="flex-1 flex items-center justify-center gap-2 border-2 border-[#2D7A3A] text-[#2D7A3A] [font-family:'Oswald',sans-serif] font-bold uppercase tracking-wider py-3 rounded-lg text-sm">
+        <a href="tel:+18888888888" className="flex-1 flex items-center justify-center gap-2 border-2 border-[#2D7A3A] text-[#2D7A3A] [font-family:'Oswald',sans-serif] font-bold uppercase tracking-wider py-3 rounded-lg text-sm active:scale-95 transition-transform">
           <Phone size={16} /> Call
         </a>
-        <a href="#quote" className="flex-1 flex items-center justify-center gap-2 bg-[#2D7A3A] text-white [font-family:'Oswald',sans-serif] font-bold uppercase tracking-wider py-3 rounded-lg text-sm">
+        <a href="#quote" className="flex-1 flex items-center justify-center gap-2 bg-[#2D7A3A] text-white [font-family:'Oswald',sans-serif] font-bold uppercase tracking-wider py-3 rounded-lg text-sm active:scale-95 transition-transform">
           Get Quote <ArrowRight size={16} />
         </a>
       </div>
+
+      {/* ── Pulsing Floating Call Button (mobile only, above sticky bar) ── */}
+      <style>{`
+        @keyframes tcm-pulse {
+          0%   { box-shadow: 0 0 0 0 rgba(45,122,58,0.7); }
+          60%  { box-shadow: 0 0 0 14px rgba(45,122,58,0); }
+          100% { box-shadow: 0 0 0 0 rgba(45,122,58,0); }
+        }
+        @keyframes tcm-ring {
+          0%,100% { transform: rotate(0deg); }
+          10%      { transform: rotate(-15deg); }
+          20%      { transform: rotate(15deg); }
+          30%      { transform: rotate(-10deg); }
+          40%      { transform: rotate(10deg); }
+          50%      { transform: rotate(0deg); }
+        }
+        .tcm-float-btn {
+          animation: tcm-pulse 2s ease-out infinite;
+        }
+        .tcm-float-btn:hover .tcm-ring-icon,
+        .tcm-float-btn:focus .tcm-ring-icon {
+          animation: tcm-ring 0.6s ease-in-out;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .tcm-float-btn { animation: none; }
+        }
+      `}</style>
+      <a
+        href="tel:+18888888888"
+        aria-label="Call (888) 888-8888"
+        className="tcm-float-btn fixed z-50 md:hidden"
+        style={{
+          bottom: '90px',
+          right: '20px',
+          width: '62px',
+          height: '62px',
+          borderRadius: '50%',
+          background: 'linear-gradient(135deg, #3a9648 0%, #2D7A3A 100%)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '2px',
+          color: 'white',
+          textDecoration: 'none',
+          boxShadow: '0 4px 18px rgba(45,122,58,0.45)',
+        }}
+      >
+        <Phone size={22} className="tcm-ring-icon" strokeWidth={2.5} />
+        <span style={{ fontSize: '9px', fontFamily: "'Oswald', sans-serif", fontWeight: 700, letterSpacing: '0.05em', lineHeight: 1 }}>CALL</span>
+      </a>
     </div>
   );
 }
