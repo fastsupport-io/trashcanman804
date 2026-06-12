@@ -107,7 +107,7 @@ function QuoteForm({ compact = false }: { compact?: boolean }) {
         <p className="text-gray-600 max-w-sm">
           We're calculating your quote now. You'll receive an SMS and email confirmation within minutes with your total price.
         </p>
-        <p className="text-sm text-gray-500">Questions? Call us at <a href="tel:+18048369117" className="text-[#2D7A3A] font-semibold">(804) 836-9117</a></p>
+        <p className="text-sm text-gray-500">Questions? Call us at <a href="tel:+18888888888" className="text-[#2D7A3A] font-semibold">(888) 888-8888</a></p>
       </div>
     );
   }
@@ -205,7 +205,7 @@ function QuoteForm({ compact = false }: { compact?: boolean }) {
       </Button>
       <p className="text-xs text-center text-gray-400">
         No spam. We'll only contact you about your quote. <br />
-        Or call us directly: <a href="tel:+18048369117" className="text-[#2D7A3A] font-semibold">(804) 836-9117</a>
+        Or call us directly: <a href="tel:+18888888888" className="text-[#2D7A3A] font-semibold">(888) 888-8888</a>
       </p>
     </form>
   );
@@ -245,10 +245,10 @@ export default function Home() {
             ))}
           </nav>
           <div className="flex items-center gap-3">
-            <a href="tel:+18048369117"
+            <a href="tel:+18888888888"
               className={`hidden sm:flex items-center gap-2 font-body font-semibold text-sm transition-colors ${scrolled ? 'text-[#2D7A3A]' : 'text-white'}`}>
               <Phone size={16} />
-              (804) 836-9117
+              (888) 888-8888
             </a>
             <a href="#quote"
               className="bg-[#2D7A3A] text-white [font-family:'Oswald',sans-serif] font-semibold uppercase tracking-wider text-sm px-5 py-2.5 rounded transition-all hover:bg-[#235f2d] hover:shadow-lg">
@@ -302,7 +302,7 @@ export default function Home() {
                 <a href="#quote" className="btn-primary bg-[#2D7A3A] text-white cta-pulse inline-flex items-center gap-2">
                   Get Instant Quote <ArrowRight size={18} />
                 </a>
-                <a href="tel:+18048369117" className="inline-flex items-center gap-2 border-2 border-white/40 text-white [font-family:'Oswald',sans-serif] font-semibold uppercase tracking-wider px-8 py-4 rounded hover:bg-white/10 transition-all">
+                <a href="tel:+18888888888" className="inline-flex items-center gap-2 border-2 border-white/40 text-white [font-family:'Oswald',sans-serif] font-semibold uppercase tracking-wider px-8 py-4 rounded hover:bg-white/10 transition-all">
                   <Phone size={18} /> Call Now
                 </a>
               </div>
@@ -493,7 +493,7 @@ export default function Home() {
 
           <p className="text-center text-white/40 font-body text-sm mt-8">
             Shipping calculated separately based on delivery location and order size. <br />
-            Call <a href="tel:+18048369117" className="text-[#5CB85C] hover:underline">(804) 836-9117</a> for large freight quotes.
+            Call <a href="tel:+18888888888" className="text-[#5CB85C] hover:underline">(888) 888-8888</a> for large freight quotes.
           </p>
         </div>
       </section>
@@ -647,8 +647,8 @@ export default function Home() {
             <a href="#quote" className="inline-flex items-center justify-center gap-2 bg-white text-[#2D7A3A] [font-family:'Oswald',sans-serif] font-bold uppercase tracking-wider px-10 py-5 rounded-xl text-lg hover:bg-gray-100 transition-all hover:shadow-xl">
               Get My Instant Quote <ArrowRight size={20} />
             </a>
-            <a href="tel:+18048369117" className="inline-flex items-center justify-center gap-2 border-2 border-white text-white [font-family:'Oswald',sans-serif] font-bold uppercase tracking-wider px-10 py-5 rounded-xl text-lg hover:bg-white/10 transition-all">
-              <Phone size={20} /> (804) 836-9117
+            <a href="tel:+18888888888" className="inline-flex items-center justify-center gap-2 border-2 border-white text-white [font-family:'Oswald',sans-serif] font-bold uppercase tracking-wider px-10 py-5 rounded-xl text-lg hover:bg-white/10 transition-all">
+              <Phone size={20} /> (888) 888-8888
             </a>
           </div>
         </div>
@@ -690,7 +690,7 @@ export default function Home() {
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
                   <Phone size={16} className="text-[#5CB85C] shrink-0" />
-                  <a href="tel:+18048369117" className="font-body text-white/70 hover:text-white text-sm">(804) 836-9117</a>
+                  <a href="tel:+18888888888" className="font-body text-white/70 hover:text-white text-sm">(888) 888-8888</a>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail size={16} className="text-[#5CB85C] shrink-0" />
@@ -723,7 +723,7 @@ export default function Home() {
 
       {/* ── Mobile Sticky CTA Bar ── */}
       <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white border-t border-gray-200 shadow-2xl px-4 py-3 flex gap-3">
-        <a href="tel:+18048369117" className="flex-1 flex items-center justify-center gap-2 border-2 border-[#2D7A3A] text-[#2D7A3A] [font-family:'Oswald',sans-serif] font-bold uppercase tracking-wider py-3 rounded-lg text-sm">
+        <a href="tel:+18888888888" className="flex-1 flex items-center justify-center gap-2 border-2 border-[#2D7A3A] text-[#2D7A3A] [font-family:'Oswald',sans-serif] font-bold uppercase tracking-wider py-3 rounded-lg text-sm">
           <Phone size={16} /> Call
         </a>
         <a href="#quote" className="flex-1 flex items-center justify-center gap-2 bg-[#2D7A3A] text-white [font-family:'Oswald',sans-serif] font-bold uppercase tracking-wider py-3 rounded-lg text-sm">
